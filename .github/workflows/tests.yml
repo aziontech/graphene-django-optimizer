@@ -11,9 +11,9 @@ jobs:
         django: [">=3.1.0,<3.2", ">=2.2.0,<2.3"]
         python-version: ["3.7", "3.8"]
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@a37ce9120846195fa4ece8f58b268e6043cb2f26 # v3.7.0
       - name: Set up Python ${{ matrix.python-version }}
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@7f4fc3e22c37d6ff65e88745f38bd3157c663f7c # v4.9.1
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install dependencies
@@ -24,4 +24,4 @@ jobs:
       - name: Test
         run: ./setup.py test
       - name: Upload Coverage to Codecov
-        uses: codecov/codecov-action@v2
+        uses: codecov/codecov-action@f32b3a3741e1053eb607407145bc9619351dc93b # v2.1.0
